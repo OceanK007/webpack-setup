@@ -3,21 +3,33 @@ const path = require('path');
 
 module.exports = 
 {
-    entry: ['./src/js/index.js'],
+    entry: ['./src/index.js'],
     output: 
     {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js"
     },
-    devtool: "source-map",
+    // mode: Tells webpack to use its built-in optimizations accordingly.
+    mode: 'development',    // Possible values for mode are: none, development or production(default).
+    // devtool: Used for debugging, (Never use inline-source-map or eval-souce-map for production as they can increase bundle size and reduce the overall performance).
+    devtool: "source-map",  
+    // target: Webpack will combine for usage in particular environment.
+    target: 'web',      // Default is web. Other options: node
     module:
     {
         rules:
         [
             { 
-                test: /\.js$/, 
-                loader: 'babel-loader',
-                exclude: /node_modules/
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: 
+                {
+                    loader: 'babel-loader',
+                    options: 
+                    {
+                        presets: ['env']
+                    }
+                }
             },
             {
                 test: /\.scss$/,
@@ -42,6 +54,5 @@ module.exports =
         ({
             template: 'index.html'
         })
-    ],
-    mode: 'development'
+    ]
 };
