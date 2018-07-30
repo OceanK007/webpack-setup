@@ -33,5 +33,8 @@
     - babel-preset-latest
     - other community plugins involving es20xx: babel-preset-node5, babel-preset-es2015-node, etc
 
+# To install babel, use this npm install:
+* npm install babel-loader@8.0.0-beta.0 @babel/core @babel/preset-env webpack
+
 # URL
 https://webpack.js.org/guides/getting-started/#basic-setup
