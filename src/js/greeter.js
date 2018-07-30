@@ -1,7 +1,12 @@
 import {createHTMLElement} from './service';
 
 //console.log(createElement());
+
+// JavaScript
 document.querySelector('body').appendChild(createElement('Ocean'));
+
+// JQuery
+$("body").append(createElement('Life'));
 
 // Creating element.
 function createElement(name)

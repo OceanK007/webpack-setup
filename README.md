@@ -1,3 +1,10 @@
+# Packages:
+* webpack, webpack-dev-server
+* babel
+* Loaders: css,style,file,node-sass,babel
+* jquery, jquery-ui-bundle
+* html-webpack-plugin
+
 # Commands:
 1. npm init
 2. npm install --save-dev webpack webpack-cli

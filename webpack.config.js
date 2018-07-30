@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = 
 {
@@ -45,6 +46,17 @@ module.exports =
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
                 exclude: /node_modules/
+            },
+            {
+                test: /\.(jpe?g|png|gif)$/i,
+                loader:"file-loader",
+                query:
+                {
+                    name:'[name].[ext]',
+                    outputPath:'images/'
+                    //the images will be emmited to dist/images folder
+                    //the images will be put in the DOM <style> tag as eg. background: url(assets/images/image.png);
+                }
             }
         ]
     },
@@ -53,6 +65,13 @@ module.exports =
         new HtmlWebpackPlugin
         ({
             template: 'index.html'
+        }),
+        new webpack.ProvidePlugin
+        ({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery'",
+            "window.$": "jquery"
         })
     ]
 };
