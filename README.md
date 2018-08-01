@@ -43,5 +43,12 @@
 # To install babel, use this npm install:
 * npm install babel-loader@8.0.0-beta.0 @babel/core @babel/preset-env webpack
 
+# To install eslint:
+* We used airbnb-base
+* We used eslint-loader to automatically execute eslint on npm start. No need any additional scripts
+
+# URL Eslint: 
+https://medium.com/dailyjs/adding-eslint-to-your-project-7bd4feca35a8    // Use for "eslint init" > setup initial steps only.
+
 # URL
 https://webpack.js.org/guides/getting-started/#basic-setup
