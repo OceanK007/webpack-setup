@@ -57,7 +57,17 @@ module.exports =
                     //the images will be emmited to dist/images folder
                     //the images will be put in the DOM <style> tag as eg. background: url(assets/images/image.png);
                 }
-            }
+            },
+            {
+                enforce: 'pre',
+                test: /\.js?$/,
+                exclude: [/node_modules/],
+                loader: 'eslint-loader',
+                options: 
+                {
+                    fix: true,
+                },
+            },
         ]
     },
     plugins: 
