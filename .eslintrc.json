@@ -9,7 +9,8 @@
     {
         "document": false
     },
-	"rules": {
+    "rules": 
+    {
         "import/prefer-default-export": "off",
         "linebreak-style": 0,
         "func-names" :0,
@@ -17,5 +18,5 @@
         "allowEmptyReject": true,
         "no-param-reassign": 0,
         "no-use-before-define": 0
-  },
+    }
 }
