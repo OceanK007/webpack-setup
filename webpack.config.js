@@ -81,7 +81,8 @@ module.exports =
             $: "jquery",
             jQuery: "jquery",
             "window.jQuery": "jquery'",
-            "window.$": "jquery"
+            "window.$": "jquery",
+            Popper: ['popper.js', 'default']
         })
     ]
 };
